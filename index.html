@@ -182,12 +182,45 @@
                 margin-top: 20px;
             }
             video {
-                display: block;
-                max-width: 600px;
+                display: flex;
+                justify-content: center;
+                max-width: 400px;
                 height: auto;
                 margin: 20px auto;
                 border-radius: 5px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            }
+            .rabudo-sangue-section {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 30px;
+                margin: 20px auto;
+                max-width: 900px;
+            }
+            .rabudo-sangue-section img {
+                width: 353.3px;
+                height: 273.3px;
+                object-fit: cover;
+                border-radius: 5px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+                transition: transform 0.1s ease-in-out;
+                margin: 0;
+            }
+            .rabudo-sangue-section img:hover {
+                transform: scale(1.05);
+            }
+            .rabudo-sangue-section video {
+                width: fit-content;
+                height: auto;
+                border-radius: 5px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+                margin: 0;
+                transition: transform 0.1s ease-in-out;
+            }
+            .rabudo-sangue-section video:hover {
+                transform: scale(1.05);
             }
             ul, ol {
                 margin: 15px auto;
@@ -202,10 +235,14 @@
             }
             ul li::marker {
                 color: #0D3244;
+                font-size: 1.8em;
+                margin: 0;
             }
             ol li::marker {
                 color: #0D3244;
                 font-weight: bold;
+                font-size: 1.8em;
+                margin: 0;
             }
             footer {
                 background-color: #0D3244;
@@ -361,10 +398,15 @@
             </div>
             <br>
             <p>Recentemente (essa semana) ele foi fazer exames pra ser doador de sangue na minha cidade. Eis aqui o vídeo desse momento.</p>
-            <video controls autoplay loop muted>
-                <source src="https://i.imgur.com/WWt6CL4.mp4" type="video/mp4">
-                Seu navegador não suporta a tag de vídeo.
-            </video>
+            <p>Atualizações (13/06/2025): hoje ele foi doar sangue, depois de ser aprovado nos exames. Ele ganhou sachês e uma gravatinha linda.
+            Sexta-feira 13 com homenagem ao meu gatinho pretinho.</p>
+            <div class="rabudo-sangue-section"> 
+                <video controls autoplay loop muted>
+                    <source src="https://i.imgur.com/WWt6CL4.mp4" type="video/mp4">
+                    Seu navegador não suporta a tag de vídeo.
+                </video>
+                <img src="https://i.imgur.com/S33TivH.jpeg">
+            </div>
             <br>
             <p>
                 Agora uma lista de apelidos pelo qual o trem preto normalmente é chamado (além do nome dele):
@@ -471,7 +513,7 @@
         <script>
             window.addEventListener('scroll', function() {
                 const body = document.body;
-                const scrollThreshold = 2800;
+                const scrollThreshold = 3500;
                 
                 if(window.scrollY > scrollThreshold) {
                     body.classList.add('scrolled-background');
